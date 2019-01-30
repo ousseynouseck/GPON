@@ -1,0 +1,6 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::acceuil
+    defaults:
+        path: /app
+        permanent: true

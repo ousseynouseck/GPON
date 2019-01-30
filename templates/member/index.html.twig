@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<form action="" method="post">
+{{ form_start(form)}}
+{{ form_row(form.centrales, {'id':'cat', 'label':"Central"}) }}
+{{ form_row(form.items, {'id':'souscat', 'label':"Nom su Sr"}) }}
+{{ form_row(form.bmd, {'id': 'inf','label':"Bande Metrique de Départ",'attr':{'class': 'calcul'}}) }}
+{{ form_row(form.bma, {'id': 'sup','label':"Bande Metrique d'Arrivée",'attr':{'class': 'calcul'}})}}
+{{ form_row(form.longueurtirage, {'read_only':'true', 'id': 'result','label':"Longueur Tirage",'attr':{'readonly':"true"}}) }}
+{{ form_row(form.nchads, {'label':"Numéro ch de Départ",'attr':{'placeholder':"Numéro ch de Départ"}}) }}
+{{ form_row(form.nchas, {'label':"Numéro ch d'Arrivée",'attr':{'placeholder':"Numéro ch d'Arrivée"}}) }}
+{{ form_row(form.blocages, {'label':"Blocage",'attr':{'placeholder':"Blocage"}}) }}
+{{ form_row(form.commentaires, {'label':"Commentaires",'attr':{'placeholder':"Commentaires"}}) }}
+{{ form_row(form.typeboites, {'label':"Type de boite",'attr':{'placeholder':"Type de boite"}}) }}
+{{ form_row(form.typecables, {'label':"Type de Capable",'attr':{'placeholder':"Type de Capable"}}) }}
+{{ form_row(form.capacitecables, {'label':"Capacite du Cable",'attr':{'placeholder':"Type de Capable"}}) }}
+{{ form_row(form.eql, {'label':"Eql",'attr':{'placeholder':"Eql"}}) }}
+{{ form_row(form.zoneblocage, {'label':"Zone de Blocage",'attr':{'placeholder':"Zone de Blocage"}}) }}
+{{ form_row(form.actions, {'label':"Actions",'attr':{'placeholder':"Actions"}}) }}
+{{ form_row(form.numerocoupleur, {'label':"Numero de Coupleur",'attr':{'placeholder':"Numero de Coupleur"}}) }}
+{{ form_row(form.etiquettes, {'label':"Etiquette",'attr':{'placeholder':"Etiquette"}}) }}
+{{ form_row(form.gainegalvars, {'label':"Gaine Grise",'attr':{'placeholder':"Gaine Galvar"}}) }}
+{{ form_row(form.gainegrise, {'label':"Gaine Grise",'attr':{'placeholder':"Gaine Grise"}}) }}
+{{ form_row(form.gainevertes, {'label':"Gaine Verte",'attr':{'placeholder':"Gaine Verte"}}) }}
+{{ form_row(form.pochages, {'label':"Pochage",'attr':{'placeholder':"Pochage"}}) }}
+{{ form_row(form.statuts, {'label':"Statut",'attr':{'placeholder':"Statut"}}) }}
+{{ form_row(form.typetirages, {'label':"Type de Tirage",'attr':{'placeholder':"Type de Tirage"}}) }}
+{{ form_row(form.port, {'label':"Type de Support",'attr':{'placeholder':"Type de Tirage"}}) }}
+
+<button type="submit" class="btn btn-primary" style="text-align:center" value="">Enregistrer</button>
+{{ form_end(form)}}
+</form>
+{% endblock %}
+{% block javascripts %}
+<script src="{{asset('assets/js/jquery.js')}}"></script>
+ <script src="{{asset('assets/js/main.js')}}"></script>
+{% endblock %}

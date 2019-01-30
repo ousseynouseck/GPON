@@ -1,0 +1,24 @@
+/*base*/
+body{background: #696060;
+width: auto;
+font-family: 'Times New Roman', Times, serif;
+font-size: 18px}
+.bck1{background: #fff;}
+
+/*generique*/
+.padded{padding: 15px;}
+
+/*header*/
+header#header {margin-bottom: 20px;padding: 10px; background-color:rgb(7, 6, 6)}
+header#header h1 {text-align: center;color: #e9dddd;}
+
+/*footer*/
+footer#footer{margin-top: 20px;padding: 35px; background-color:rgb(7, 6, 6); color: #fff }
+
+nav#main-nav ul li a{
+    color: #fdfdfd;
+}
+
+table{
+    width: 200px;
+}
